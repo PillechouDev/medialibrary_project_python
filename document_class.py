@@ -9,6 +9,7 @@ class Document:
     def getTitre(self):
         return self.titre
 
-    def editTitle(self, titre):
-        self.titre = titre
+    def editTitle(self):
+        print("Choissisez le nouveau titre pour le document : " + self.titre)
+        self.titre = input()
         print("Le nouveau nom du document est " + self.titre)

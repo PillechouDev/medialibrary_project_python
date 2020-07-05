@@ -2,17 +2,27 @@ import document_class
 
 menuEdit = [
     "Titre",
-    "Auteur",
-    "Content"
+    "Auteur"
 ]
 
 
 class textDocument(document_class.Document):
     """
-        Classe de d'un document texte
+        Classe enfant de document_class , classe d'un document texte
     """
+
+
     def __init__(self, titre, auteur, contenu):
-        document_class.Document.__init__(self, titre)
+        """
+
+        :param titre: Titre du text
+        :type titre: str
+        :param auteur: Auteur du text
+        :type auteur: str
+        :param contenu: Contenu du text
+        :type contenu: str
+        """
+        document_class.Document.__init__(self, titre,"text")
         self.content = contenu
         self.author = auteur
 
